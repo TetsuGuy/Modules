@@ -1,0 +1,3 @@
+REM %%f  = path + filename + extension
+REM %%~nf = path + filename
+for %%f in (*mkv) do "C:/Program Files/MKVToolNix\mkvmerge.exe" --ui-language de --output ^"%%~nf_new.mkv^" --audio-tracks 2 --subtitle-tracks 4 --language 0:jpn --track-name ^"0:H.264/AVC Video^" --default-track 0:yes --forced-track 0:yes --language 2:jpn --track-name ^"2:Japanese: Stereo^" --default-track 2:yes --forced-track 2:yes --language 4:eng --track-name ^"4:English Subtitles^" --default-track 4:yes --forced-track 4:yes ^"^(^" ^"%%f^" ^"^)^" --track-order 0:0,0:2,0:4
